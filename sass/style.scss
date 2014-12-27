@@ -44,6 +44,14 @@ nav {
   padding: 20px 20px;
 }
 
+.white-button {
+  background-color: #fff;
+  color: $off-black;
+  &:hover {
+    background-color: #f6f6f6;
+  }
+}
+
 /********************
   Index Page Styles	
 ********************/

@@ -7377,6 +7377,12 @@ nav ul li:hover, nav ul li.active {
   border: 1px solid #eee;
   padding: 20px 20px; }
 
+.white-button {
+  background-color: #fff;
+  color: rgba(0, 0, 0, 0.87); }
+  .white-button:hover {
+    background-color: #f6f6f6; }
+
 /********************
   Index Page Styles	
 ********************/
