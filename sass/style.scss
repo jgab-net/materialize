@@ -44,13 +44,19 @@ nav {
   padding: 20px 20px;
 }
 
-.white-button {
-  background-color: #fff;
-  color: $off-black;
+.teal-button {
+  background-color: color("teal", "lighten-2");
+  color: #fff;
   &:hover {
-    background-color: #f6f6f6;
+    background-color: color("teal", "lighten-1");
   }
 }
+
+.waves-effect.waves-white .waves-ripple {
+   /* The alpha value allows the text and background color
+   of the button to still show through. */
+    background-color: rgba(255, 255, 255, 0.75);
+  }
 
 /********************
   Index Page Styles	

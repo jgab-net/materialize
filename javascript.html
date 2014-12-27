@@ -93,7 +93,7 @@
         <div class="row">
           <div class="col s12">
             <p>Materialize provides an easy way for you to send unobtrusive alerts to your users through toasts. These toasts are also placed and sized responsively, try it out by clicking the button below on different device sizes.</p>
-            <a class="white-button waves-effect waves-teal btn" onclick="toast('I am a toast', 4000)">Toast!</a>
+            <a class="teal-button waves-effect waves-white btn" onclick="toast('I am a toast', 4000)">Toast!</a>
           </div>
         </div>
         <div class="row">
@@ -110,14 +110,14 @@
 
             <h4>Custom HTML</h4>
             <p>You can pass in an HTML String as the first argument as well. Take a look at the example below, where we pass in text as well as a flat button. If you call an external function instead of in-line JavaScript, you will not need to escape quotation marks. </p>
-            <a class="white-button waves-effect waves-teal btn" onclick="toast('<span>Item Deleted</span><a class=&quot;btn-flat yellow-text&quot; href=&quot;#1&quot;>Undo</a>', 5000)">Toast with Action</a>
+            <a class="teal-button waves-effect waves-white btn" onclick="toast('<span>Item Deleted</span><a class=&quot;btn-flat yellow-text&quot; href=&quot;#1&quot;>Undo</a>', 5000)">Toast with Action</a>
             <pre><code class="language-javascript">
   &lt;a class="waves-effect waves-light btn" onclick="toast('&lt;span>Item Deleted&lt;/span>&lt;a class=<xmp>&quot;</xmp>btn-flat yellow-text<xmp>&quot;</xmp> href=<xmp>&quot;</xmp>#!<xmp>&quot;</xmp>>Undo&lt;a>', 5000)">Toast!&lt;/a>
             </code></pre>
 
             <h4>Callback</h4>
             <p>You can have the toast callback a function when it has been dismissed</p>
-            <a class="white-button waves-effect waves-teal btn" onclick="toast('I am a toast', 4000,'',function(){alert('Your toast was dismissed')})">Toast!</a>
+            <a class="teal-button waves-effect waves-white btn" onclick="toast('I am a toast', 4000,'',function(){alert('Your toast was dismissed')})">Toast!</a>
             <pre><code class="language-markup">
   &lt;a class="btn" onclick="toast('I am a toast', 4000,'',function(){alert('Your toast was dismissed')})">Toast!&lt;/a>
             </code></pre>
@@ -125,7 +125,7 @@
             <h4>Styling Toasts</h4>
             <p>We've added the ability to customize your toasts easily. You can pass in classes as an optional parameter into the toast functions like this: <code class="language-javascript">toast('I am a rounded toast', 2000, 'rounded')</code>. We've added a rounded class for you, but you can create your own CSS classes and apply them to toasts. Checkout out our full example below.</p>
 
-            <a class="white-button waves-effect waves-teal btn" onclick="toast('I am a toast!', 3000, 'rounded')">Round Toast!</a>
+            <a class="teal-button waves-effect waves-white btn" onclick="toast('I am a toast!', 3000, 'rounded')">Round Toast!</a>
 
             <pre><code class="language-javascript">
   toast('I am a toast!', 3000, 'rounded') // 'rounded' is the class I'm applying to the toast
@@ -139,7 +139,7 @@
         <div class="row">
           <div class="col s12">
             <p>Tooltips are small, interactive, textual hints for mainly graphical elements. When using icons for actions you can use a tooltip to give people clarification on its function.</p>
-            <a class="white-button btn tooltipped" data-position="bottom" data-tooltip="I am tooltip"> SHOW me TOOLTIP</a>
+            <a class="teal-button btn tooltipped" data-position="bottom" data-tooltip="I am tooltip"> SHOW me TOOLTIP</a>
             <br>
           </div>
         </div>
@@ -165,7 +165,7 @@
         <div class="row">
           <div class="col s12">
             <p>Use a modal for dialog boxes, confirmation messages, or other content that can be called up. In order for the modal to work you have to add the Modal ID to the link of the trigger. To add a close button, just add the class <code class="language-css">.modal-close</code> to your button.</p>
-            <a class="white-button waves-effect waves-teal btn modal-trigger" href="#modal1">Modal</a>
+            <a class="teal-button waves-effect waves-white btn modal-trigger" href="#modal1">Modal</a>
           </div>
         </div>
         <div id="modal1" class="modal">
@@ -238,7 +238,7 @@
           <div class="col s12">
             <p>Add a dropdown list to any button. Make sure that the <code class="language-markup">data-activates</code> attribute matches the id in the <code class="language-markup">&lt;ul></code> tag. </p>
             <p>You can add a divider with the <code class="language-markup">&lt;li class="divider">&lt;/li></code> tag. </p>
-            <a class='dropdown-button white-button waves-effect waves-teal btn' href='#' data-activates='dropdown1'>Drop Me!</a>
+            <a class='dropdown-button teal-button waves-effect waves-white btn' href='#' data-activates='dropdown1'>Drop Me!</a>
             <ul id='dropdown1' class='dropdown-content'>
               <li><a href="#!">one</a></li>
               <li><a href="#!">two</a></li>
@@ -433,7 +433,7 @@
         <h4>Available Colors</h4>
         <p>To use these, just add the corresponding class to your button. Play around with changing the background color of butons and the waves effect to create something cool!</p>
         <pre><code class="language-markup">
-  &lt;a href="#!" class="btn waves-effect waves-teal">Send&lt;/a>
+  &lt;a href="#!" class="btn waves-effect waves-white">Send&lt;/a>
         </code></pre>
         <div class="collection waves-color-demo">
           <div class="collection-item">Default<a href="#!" class="waves-effect btn secondary-content">Send</a></div>
@@ -443,7 +443,7 @@
           <div class="collection-item"><code class="language-markup">waves-orange</code><a href="#!" class="waves-effect waves-orange btn secondary-content">Send</a></div>
           <div class="collection-item"><code class="language-markup">waves-purple</code><a href="#!" class="waves-effect waves-purple btn secondary-content">Send</a></div>
           <div class="collection-item"><code class="language-markup">waves-green</code><a href="#!" class="waves-effect waves-green btn secondary-content">Send</a></div>
-          <div class="collection-item"><code class="language-markup">waves-teal</code><a href="#!" class="waves-effect waves-teal btn secondary-content">Send</a></div>
+          <div class="collection-item"><code class="language-markup">waves-white</code><a href="#!" class="waves-effect waves-white btn secondary-content">Send</a></div>
         </div>
       </div>
       <div class="col s12 m6">

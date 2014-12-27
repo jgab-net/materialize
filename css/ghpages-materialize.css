@@ -7377,11 +7377,16 @@ nav ul li:hover, nav ul li.active {
   border: 1px solid #eee;
   padding: 20px 20px; }
 
-.white-button {
-  background-color: #fff;
-  color: rgba(0, 0, 0, 0.87); }
-  .white-button:hover {
-    background-color: #f6f6f6; }
+.teal-button {
+  background-color: #4db6ac;
+  color: #fff; }
+  .teal-button:hover {
+    background-color: #26a69a; }
+
+.waves-effect.waves-white .waves-ripple {
+  /* The alpha value allows the text and background color
+   of the button to still show through. */
+  background-color: rgba(255, 255, 255, 0.75); }
 
 /********************
   Index Page Styles	
