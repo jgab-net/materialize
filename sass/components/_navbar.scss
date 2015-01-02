@@ -1,4 +1,4 @@
-nav {
+.nav {
   color: #fff;
   @extend .z-depth-1;
   background-color: color("materialize-red", "lighten-2");
@@ -105,11 +105,11 @@ nav {
 
 }
 @media #{$medium-and-up} {
-  nav, nav .nav-wrapper i, nav a.button-collapse, nav a.button-collapse i {
+  .nav, .nav .nav-wrapper i, .nav a.button-collapse, .nav a.button-collapse i {
     height: 64px;
     line-height: 64px;
   }
-  nav .nav-wrapper i {
+  .nav .nav-wrapper i {
     font-size: 2rem;
   }
 }

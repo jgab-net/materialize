@@ -245,41 +245,47 @@ jQuery.extend( jQuery.easing,
     };
 
     options = $.extend(defaults, options);
-    var $this = $(this);
-    
-    var $panel_headers = $(this).find('.collapsible-header');
-  
-    if (defaults.accordion) {
 
-      $panel_headers.each(function () {
-        $(this).click(function () {
-          
-          $(this).parent().toggleClass('active');
-          if ($(this).parent().hasClass('active')){
-            $(this).siblings('.collapsible-body').stop(true,false).slideDown({ duration: 350, easing: "easeOutQuart", queue: false});
-          }
-          else{
-            $(this).siblings('.collapsible-body').stop(true,false).slideUp({ duration: 350, easing: "easeOutQuart", queue: false});
-          }
-          $panel_headers.not($(this)).parent().removeClass('active');
-          $panel_headers.not($(this)).parent().children('.collapsible-body').stop(true,false).slideUp({ duration: 350, easing: "easeOutQuart", queue: false});
-        });
-      });
 
-    }
-    else {
-      $panel_headers.each(function () {
-        $(this).click(function () {
-          $(this).parent().toggleClass('active');
-          if ($(this).parent().hasClass('active')){
-            $(this).siblings('.collapsible-body').stop(true,false).slideDown({ duration: 350, easing: "easeOutQuart", queue: false});
-          }
-          else{
-            $(this).siblings('.collapsible-body').stop(true,false).slideUp({ duration: 350, easing: "easeOutQuart", queue: false});
-          }
+    return this.each(function() {
+
+      var $this = $(this);
+
+      var $panel_headers = $(this).find('.collapsible-header');
+
+      if (defaults.accordion) {
+
+        $panel_headers.each(function () {
+          $(this).click(function () {
+
+            $(this).parent().toggleClass('active');
+            if ($(this).parent().hasClass('active')){
+              $(this).siblings('.collapsible-body').stop(true,false).slideDown({ duration: 350, easing: "easeOutQuart", queue: false});
+            }
+            else{
+              $(this).siblings('.collapsible-body').stop(true,false).slideUp({ duration: 350, easing: "easeOutQuart", queue: false});
+            }
+            $panel_headers.not($(this)).parent().removeClass('active');
+            $panel_headers.not($(this)).parent().children('.collapsible-body').stop(true,false).slideUp({ duration: 350, easing: "easeOutQuart", queue: false});
+          });
         });
-      });
-    }
+
+      }
+      else {
+        $panel_headers.each(function () {
+          $(this).click(function () {
+            $(this).parent().toggleClass('active');
+            if ($(this).parent().hasClass('active')){
+              $(this).siblings('.collapsible-body').stop(true,false).slideDown({ duration: 350, easing: "easeOutQuart", queue: false});
+            }
+            else{
+              $(this).siblings('.collapsible-body').stop(true,false).slideUp({ duration: 350, easing: "easeOutQuart", queue: false});
+            }
+          });
+        });
+      }
+
+    });
   };
 }( jQuery ));;(function ($) {
 
@@ -1353,7 +1359,7 @@ jQuery.extend( jQuery.easing,
         var $this = $(this);
         var menu_id = $("#"+ $this.attr('data-activates'));
         if (options.edge != 'left') {
-          menu_id.addClass('right');
+          menu_id.addClass('right-aligned');
         }
 
         function removeMenu() {
@@ -1790,7 +1796,7 @@ jQuery.extend( jQuery.easing,
 
     // Text based inputs
     var input_selector = 'input[type=text], input[type=password], input[type=email], textarea';
-    
+
     $(input_selector).each(function(){
       if($(this).val().length !== 0) {
        $(this).siblings('label, i').addClass('active');
@@ -1804,12 +1810,12 @@ jQuery.extend( jQuery.easing,
     $(document).on('blur', input_selector, function () {
       console.log($(this).is(':valid'));
       if ($(this).val().length === 0) {
-        $(this).siblings('label, i').removeClass('active');     
+        $(this).siblings('label, i').removeClass('active');
 
         if ($(this).hasClass('validate')) {
-          $(this).removeClass('valid');          
-          $(this).removeClass('invalid');                 
-        } 
+          $(this).removeClass('valid');
+          $(this).removeClass('invalid');
+        }
       }
       else {
         if ($(this).hasClass('validate')) {
@@ -1819,9 +1825,9 @@ jQuery.extend( jQuery.easing,
           }
           else {
             $(this).removeClass('valid');
-            $(this).addClass('invalid');         
-          }                          
-        } 
+            $(this).addClass('invalid');
+          }
+        }
       }
     });
 
@@ -1854,7 +1860,7 @@ jQuery.extend( jQuery.easing,
     });
 
     var range_wrapper = '.range-field';
-    
+
       $(document).on("mousedown", range_wrapper, function(e) {
         var thumb = $(this).children('.thumb');
         if (thumb.length <= 0) {
@@ -1866,7 +1872,7 @@ jQuery.extend( jQuery.easing,
       $(this).addClass('active');
 
       if (!thumb.hasClass('active')) {
-        thumb.velocity({ height: "30px", width: "30px", top: "-20px", marginLeft: "-15px"}, { duration: 300, easing: 'easeOutExpo' });  
+        thumb.velocity({ height: "30px", width: "30px", top: "-20px", marginLeft: "-15px"}, { duration: 300, easing: 'easeOutExpo' });
       }
       var left = e.pageX - $(this).offset().left;
       var width = $(this).outerWidth();
@@ -1878,8 +1884,8 @@ jQuery.extend( jQuery.easing,
         left = width;
       }
       thumb.addClass('active').css('left', left);
-      thumb.find('.value').html($(this).children('input[type=range]').val());   
-   
+      thumb.find('.value').html($(this).children('input[type=range]').val());
+
     });
     $(document).on("mouseup", range_wrapper, function() {
       range_mousedown = false;
@@ -1891,7 +1897,7 @@ jQuery.extend( jQuery.easing,
       var thumb = $(this).children('.thumb');
       if (range_mousedown) {
         if (!thumb.hasClass('active')) {
-          thumb.velocity({ height: "30px", width: "30px", top: "-20px", marginLeft: "-15px"}, { duration: 300, easing: 'easeOutExpo' });  
+          thumb.velocity({ height: "30px", width: "30px", top: "-20px", marginLeft: "-15px"}, { duration: 300, easing: 'easeOutExpo' });
         }
         var left = e.pageX - $(this).offset().left;
         var width = $(this).outerWidth();
@@ -1903,9 +1909,9 @@ jQuery.extend( jQuery.easing,
           left = width;
         }
         thumb.addClass('active').css('left', left);
-        thumb.find('.value').html($(this).children('input[type=range]').val());   
+        thumb.find('.value').html($(this).children('input[type=range]').val());
       }
-      
+
     });
     $(document).on("mouseout", range_wrapper, function() {
       if (!range_mousedown) {
@@ -1952,6 +1958,10 @@ jQuery.extend( jQuery.easing,
             // Check if option element is disabled
             if (!$(this).hasClass('disabled')) {
               $curr_select.find('option').eq(i).prop('selected', true);
+              // Trigger onchange() event
+              if (typeof($curr_select.context.onchange) === "function") {
+                $curr_select[0].onchange();
+              }
               $curr_select.prev('span.select-dropdown').html($(this).text());
             }
           });
@@ -1961,7 +1971,7 @@ jQuery.extend( jQuery.easing,
         $select.wrap(wrapper);
 
         // Add Select Display Element
-        var $newSelect = $('<span class="select-dropdown ' + (($select.is(':disabled')) ? 'disabled' : '') 
+        var $newSelect = $('<span class="select-dropdown ' + (($select.is(':disabled')) ? 'disabled' : '')
                          + '" data-activates="select-options-' + uniqueID +'">' + label.html() + '</span>');
         $select.before($newSelect);
         $('body').append(options);
